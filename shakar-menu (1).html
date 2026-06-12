@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="شَكَر | Shakar – تجربة حلويات ومشروبات مستوحاة من شوارع باريس وسط بغداد. دونات، كريب، مشروبات متخصصة. شارع فلسطين، بغداد.">
+<meta property="og:title" content="شَكَر | Shakar – Baghdad's Premier Dessert Café">
+<meta property="og:description" content="لأول مرة في العراق – تجربة حلويات فاخرة مستوحاة من باريس">
+<meta name="theme-color" content="#F4F2E7">
+<title>شَكَر | Shakar – Baghdad</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F4F2E7;
+    --bg2: #EAE6D8;
+    --bg3: #E2DDD0;
+    --olive-dark: #566133;
+    --olive: #6C7740;
+    --olive-light: #8A9560;
+    --rose: #C8A3A0;
+    --rose-light: #D9BCBA;
+    --text: #2D2D2D;
+    --text-light: #6B6860;
+    --text-muted: #9A9690;
+    --white: #FDFCF8;
+    --shadow: rgba(86,97,51,0.08);
+    --shadow-md: rgba(86,97,51,0.14);
+    --radius: 20px;
+    --radius-lg: 32px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+    direction: rtl;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--olive-light); border-radius: 2px; }
+
+  /* ── GLOBAL ── */
+  .en { font-family: 'Playfair Display', 'Inter', serif; direction: ltr; }
+  .en-body { font-family: 'Inter', sans-serif; }
+
+  img { max-width: 100%; display: block; }
+
+  section { position: relative; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 24px;
+    background: rgba(244,242,231,0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(138,149,96,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .nav-logo {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--olive-dark);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+
+  .nav-logo span {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--olive-light);
+    display: block;
+    line-height: 1;
+    text-align: center;
+    direction: ltr;
+    margin-top: 1px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--olive-dark); }
+
+  .nav-order-btn {
+    background: var(--olive-dark);
+    color: var(--white) !important;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    transition: background 0.2s, transform 0.15s !important;
+  }
+
+  .nav-order-btn:hover {
+    background: var(--olive) !important;
+    transform: translateY(-1px);
+    color: var(--white) !important;
+  }
+
+  @media (max-width: 640px) {
+    .nav-links li:not(:last-child) { display: none; }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100svh;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-bg-decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /* Large watermark branch top-right */
+  .hero-bg-decor .branch-tl {
+    position: absolute;
+    top: 80px; right: -40px;
+    width: 320px;
+    opacity: 0.18;
+  }
+
+  .hero-bg-decor .branch-bl {
+    position: absolute;
+    bottom: 60px; left: -40px;
+    width: 260px;
+    opacity: 0.13;
+    transform: scaleX(-1) rotate(20deg);
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(200,163,160,0.18);
+    border: 1px solid rgba(200,163,160,0.4);
+    color: var(--rose);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 28px;
+    animation: fadeSlideUp 0.8s ease both;
+  }
+
+  .hero-headline {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(48px, 9vw, 88px);
+    color: var(--olive-dark);
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    animation: fadeSlideUp 0.9s 0.1s ease both;
+  }
+
+  .hero-sub-ar {
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 400;
+    color: var(--text-light);
+    max-width: 520px;
+    line-height: 1.7;
+    margin: 0 auto 36px;
+    animation: fadeSlideUp 1s 0.2s ease both;
+  }
+
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    animation: fadeSlideUp 1s 0.3s ease both;
+    margin-bottom: 52px;
+  }
+
+  .btn-primary {
+    background: var(--olive-dark);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-primary:hover {
+    background: var(--olive);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--shadow-md);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--olive-dark);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid rgba(86,97,51,0.35);
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--olive-dark);
+    background: rgba(86,97,51,0.06);
+    transform: translateY(-2px);
+  }
+
+  .hero-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    animation: fadeSlideUp 1s 0.45s ease both;
+  }
+
+  .hero-info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .hero-info-item .ico {
+    width: 32px; height: 32px;
+    background: var(--bg2);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  /* ── BRAND STORY ── */
+  .story {
+    padding: 100px 0;
+    overflow: hidden;
+  }
+
+  .story-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .story-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .section-eyebrow {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--rose);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4vw, 44px);
+    color: var(--olive-dark);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .section-body {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-light);
+    line-height: 1.85;
+  }
+
+  .story-visual {
+    position: relative;
+  }
+
+  .story-img-frame {
+    background: var(--bg2);
+    border-radius: var(--radius-lg);
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .story-img-inner {
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .story-img-decor {
+    position: absolute;
+    bottom: -20px; left: -20px;
+    background: var(--rose);
+    border-radius: var(--radius);
+    padding: 16px 24px;
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(200,163,160,0.3);
+  }
+
+  .story-img-decor .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--white);
+    direction: ltr;
+    display: block;
+  }
+
+  .story-img-decor .lbl {
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 64px;
+    height: 2px;
+    background: var(--rose);
+    margin: 24px 0;
+    border-radius: 1px;
+  }
+
+  .divider-center { margin: 24px auto; }
+
+  /* ── MENU CATEGORIES ── */
+  .menu-section { padding: 100px 0; background: var(--bg2); }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 64px;
+  }
+
+  .cat-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: 1.5px solid transparent;
+  }
+
+  .cat-card:hover, .cat-card.active {
+    border-color: var(--olive-light);
+    background: var(--white);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px var(--shadow-md);
+  }
+
+  .cat-card.active { border-color: var(--olive-dark); }
+
+  .cat-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .cat-name {
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--olive-dark);
+  }
+
+  /* ── MENU PANELS ── */
+  .menu-panel { display: none; }
+  .menu-panel.active { display: block; }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .menu-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(138,149,96,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .menu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px;
+    height: 0;
+    background: var(--olive-light);
+    border-radius: 0 var(--radius) 0 0;
+    transition: height 0.3s;
+  }
+
+  .menu-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px var(--shadow); }
+  .menu-card:hover::before { height: 100%; }
+
+  .menu-card-name {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+
+  .menu-card-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .menu-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .menu-price {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+  }
+
+  .menu-price .amount {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--olive-dark);
+    direction: ltr;
+  }
+
+  .menu-price .currency {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .price-badge {
+    background: rgba(86,97,51,0.08);
+    border-radius: 8px;
+    padding: 4px 10px;
+  }
+
+  .price-sm { font-size: 13px; color: var(--text-light); }
+
+  /* sizes display */
+  .sizes-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .size-tag {
+    background: var(--bg2);
+    border-radius: 8px;
+    padding: 3px 10px;
+    font-size: 12px;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .size-tag .sz-label { font-size: 10px; opacity: 0.75; }
+  .size-tag .sz-price { font-weight: 700; color: var(--olive-dark); }
+
+  /* ── FEATURED ── */
+  .featured { padding: 100px 0; }
+
+  .feat-scroll {
+    overflow-x: auto;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .feat-scroll::-webkit-scrollbar { display: none; }
+
+  .feat-track {
+    display: flex;
+    gap: 20px;
+    padding: 8px 24px 8px 0;
+    width: max-content;
+  }
+
+  .feat-card {
+    width: 220px;
+    flex-shrink: 0;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1px solid rgba(138,149,96,0.08);
+  }
+
+  .feat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px var(--shadow-md);
+  }
+
+  .feat-thumb {
+    height: 180px;
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .feat-thumb-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--bg3) 0%, var(--bg2) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+
+  .feat-body { padding: 18px; }
+
+  .feat-name {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .feat-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--olive-dark);
+    direction: ltr;
+    display: inline-block;
+  }
+
+  .feat-tag {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: var(--rose);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+  }
+
+  /* ── INSTAGRAM ── */
+  .instagram { padding: 100px 0; background: var(--bg2); text-align: center; }
+
+  .ig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 40px 0;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ig-cell {
+    aspect-ratio: 1;
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ig-cell:hover { transform: scale(0.97); }
+
+  .ig-cell-inner {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    font-size: 28px;
+  }
+
+  .ig-cell-inner small {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .ig-handle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--olive-dark);
+    text-decoration: none;
+    direction: ltr;
+    transition: all 0.2s;
+    box-shadow: 0 4px 16px var(--shadow);
+  }
+
+  .ig-handle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--shadow-md);
+  }
+
+  /* ── REVIEWS ── */
+  .reviews { padding: 100px 0; }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .review-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid rgba(138,149,96,0.1);
+    transition: transform 0.2s;
+  }
+
+  .review-card:hover { transform: translateY(-3px); }
+
+  .stars {
+    color: #D4A94B;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .review-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .review-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .review-author-name { font-weight: 700; font-size: 14px; }
+  .review-author-date { font-size: 12px; color: var(--text-muted); }
+
+  /* ── LOCATION ── */
+  .location-section { padding: 100px 0; background: var(--bg2); }
+
+  .location-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  @media (max-width: 768px) {
+    .location-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .location-info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .location-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    border: 1px solid rgba(138,149,96,0.1);
+  }
+
+  .location-info-item .ico {
+    width: 44px; height: 44px;
+    background: var(--bg2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .location-info-text .label {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+
+  .location-info-text .value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .map-frame {
+    background: var(--bg3);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    height: 340px;
+  }
+
+  .map-frame iframe {
+    width: 100%; height: 100%;
+    border: none;
+    opacity: 0.92;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--olive-dark);
+    color: rgba(255,255,255,0.75);
+    padding: 48px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cairo', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    direction: ltr;
+    margin-bottom: 28px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: white; }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    direction: ltr;
+  }
+
+  /* ── FLOATING ACTIONS ── */
+  .float-bar {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(244,242,231,0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(138,149,96,0.25);
+    border-radius: 50px;
+    padding: 8px 16px;
+    box-shadow: 0 8px 32px rgba(86,97,51,0.2);
+  }
+
+  .float-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 32px;
+    transition: background 0.2s, transform 0.15s;
+    min-width: 52px;
+  }
+
+  .float-btn:hover {
+    background: rgba(86,97,51,0.1);
+    transform: translateY(-2px);
+  }
+
+  .float-btn .f-icon { font-size: 20px; }
+  .float-btn .f-label { font-size: 10px; font-weight: 600; color: var(--olive-dark); }
+
+  .float-btn-primary {
+    background: var(--olive-dark);
+    padding: 10px 18px;
+  }
+
+  .float-btn-primary .f-label { color: white; }
+  .float-btn-primary:hover { background: var(--olive); }
+
+  /* ── BRANCH SVG DECORATIONS ── */
+  .branch-decor {
+    position: absolute;
+    pointer-events: none;
+  }
+
+  /* ── SPECIAL SECTION (featured items block) ── */
+  .specials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .special-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid rgba(200,163,160,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .special-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px var(--shadow-md);
+    border-color: var(--rose-light);
+  }
+
+  .special-card::after {
+    content: '✦';
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 14px;
+    color: var(--rose);
+  }
+
+  .special-card-icon { font-size: 36px; margin-bottom: 14px; display: block; }
+  .special-card-name {
+    font-weight: 700; font-size: 17px; color: var(--text); margin-bottom: 8px;
+  }
+
+  .special-card-sub {
+    font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;
+  }
+
+  .special-card-price {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--olive-dark);
+    direction: ltr;
+    display: block;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── BOXES SECTION ── */
+  .boxes-section { padding: 80px 0; }
+
+  .box-table {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(138,149,96,0.12);
+  }
+
+  .box-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 16px;
+    padding: 18px 24px;
+    align-items: center;
+    border-bottom: 1px solid rgba(138,149,96,0.08);
+    transition: background 0.15s;
+  }
+
+  .box-row:last-child { border-bottom: none; }
+  .box-row:hover { background: rgba(138,149,96,0.04); }
+
+  .box-name { font-weight: 600; font-size: 15px; }
+  .box-count { font-size: 13px; color: var(--text-muted); }
+  .box-price-cell {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--olive-dark);
+    direction: ltr;
+    white-space: nowrap;
+  }
+
+  /* ── SCROLL indicator on hero ── */
+  .scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    animation: fadeSlideUp 1s 0.8s ease both;
+  }
+
+  .scroll-hint .line {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, transparent, var(--olive-light));
+    animation: scrollLine 1.8s ease infinite;
+  }
+
+  .scroll-hint span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    direction: ltr;
+  }
+
+  @keyframes scrollLine {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero-info-row { gap: 16px; }
+    .cat-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .cat-card { padding: 18px 10px; }
+    .cat-icon { font-size: 24px; }
+    .cat-name { font-size: 12px; }
+    .feat-card { width: 180px; }
+    .box-row { grid-template-columns: 1fr auto; }
+    .box-count { display: none; }
+  }
+
+  /* ── HORIZONTAL RULE decoration ── */
+  .ornament-rule {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .ornament-rule::before, .ornament-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(138,149,96,0.25);
+  }
+
+  .ornament-rule span {
+    font-size: 18px;
+    color: var(--rose);
+  }
+
+  /* no-js fallback */
+  .menu-panel { display: none; }
+  .menu-panel.active { display: block; }
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav>
+  <a href="#" class="nav-logo">
+    شَكَر
+    <span>Shakar</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#menu">المنيو</a></li>
+    <li><a href="#story">قصتنا</a></li>
+    <li><a href="#location">الموقع</a></li>
+    <li>
+      <a href="tel:07716417002" class="nav-order-btn">اطلب الآن</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero" id="hero">
+
+  <!-- Background branch decorations -->
+  <div class="hero-bg-decor">
+    <svg class="branch-tl" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M280 20 C240 60 180 80 140 130 C100 180 110 240 80 290 C60 320 30 340 20 370" stroke="#566133" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M200 80 C220 60 250 55 270 50" stroke="#566133" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M160 130 C175 100 195 90 210 85" stroke="#566133" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M130 170 C110 155 95 145 80 148" stroke="#566133" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M115 210 C130 195 150 188 165 186" stroke="#566133" stroke-width="2" stroke-linecap="round" fill="none"/>
+      <path d="M100 250 C80 238 65 230 55 235" stroke="#566133" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <!-- buds -->
+      <circle cx="270" cy="50" r="5" fill="#C8A3A0" opacity="0.6"/>
+      <circle cx="210" cy="85" r="4" fill="#C8A3A0" opacity="0.5"/>
+      <circle cx="80" cy="148" r="4" fill="#C8A3A0" opacity="0.5"/>
+      <circle cx="165" cy="186" r="3" fill="#C8A3A0" opacity="0.4"/>
+      <circle cx="55" cy="235" r="3" fill="#C8A3A0" opacity="0.4"/>
+      <!-- small flowers -->
+      <path d="M273 46 C275 43 278 44 276 47 C279 45 281 48 278 49 C280 52 277 53 276 50 C274 53 271 51 273 49 C270 48 271 44 273 46Z" fill="#C8A3A0" opacity="0.7"/>
+    </svg>
+
+    <svg class="branch-bl" viewBox="0 0 260 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M30 20 C60 60 100 80 120 130 C140 170 130 220 160 260" stroke="#566133" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <path d="M80 80 C65 65 50 60 35 62" stroke="#566133" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M110 120 C125 105 140 100 155 98" stroke="#566133" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <path d="M125 160 C105 148 90 145 78 148" stroke="#566133" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      <circle cx="35" cy="62" r="4" fill="#C8A3A0" opacity="0.5"/>
+      <circle cx="155" cy="98" r="3" fill="#C8A3A0" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="hero-badge">
+      ✦ &nbsp;بغداد، العراق &nbsp;✦
+    </div>
+    <h1 class="hero-headline">لأول مرة في العراق</h1>
+    <p class="hero-sub-ar">
+      تجربة حلويات ومشروبات مستوحاة من شوارع باريس<br>
+      وسط قلب بغداد
+    </p>
+
+    <div class="hero-cta-row">
+      <a href="#menu" class="btn-primary">🍩 تصفح المنيو</a>
+      <a href="tel:07716417002" class="btn-secondary">📞 اطلب الآن</a>
+    </div>
+
+    <div class="hero-info-row">
+      <div class="hero-info-item">
+        <span class="ico">📍</span>
+        <span>شارع فلسطين – تقاطع الصخرة – بغداد</span>
+      </div>
+      <div class="hero-info-item">
+        <span class="ico">⭐</span>
+        <span>29K+ متابع</span>
+      </div>
+      <div class="hero-info-item">
+        <span class="ico">⏰</span>
+        <span>يومياً 10 ص – 3 ليلاً</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ STORY ══════════════════════════ -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-inner">
+      <div class="fade-in">
+        <span class="section-eyebrow">Notre Histoire</span>
+        <h2 class="section-title">قصة شَكَر</h2>
+        <div class="divider"></div>
+        <p class="section-body">
+          وُلدت شَكَر من حلم بسيط: أن تجد في بغداد ما تجده في شوارع باريس وطوكيو ونيويورك من تجارب حلوى فاخرة ومصنوعة بعناية.
+          <br><br>
+          نحن نؤمن بأن الحلوى ليست مجرد طعام، بل هي تجربة كاملة — من اللحظة التي تدخل فيها، إلى اللقمة الأولى، وحتى الصورة التي ستحتفظ بها دائماً.
+          <br><br>
+          من الدونات المعبأة بأفضل المكونات إلى الكريب المستوحى من المقاهي الأوروبية، وحتى مشروباتنا الفاخرة — كل شيء في شَكَر صُمِّم ليكون لا يُنسى.
+        </p>
+        <div class="ornament-rule" style="margin-top:28px;">
+          <span>✦</span>
+        </div>
+        <p style="font-size:13px;color:var(--text-muted);font-family:'Playfair Display',serif;font-style:italic;direction:ltr;">
+          "Where every bite tells a story."
+        </p>
+      </div>
+
+      <div class="story-visual fade-in">
+        <div class="story-img-frame">
+          <div class="story-img-inner">
+            <!-- Large branch SVG as art piece -->
+            <svg viewBox="0 0 280 360" width="200" opacity="0.22" xmlns="http://www.w3.org/2000/svg">
+              <path d="M140 340 C140 280 120 240 100 190 C80 140 60 110 80 60 C95 20 140 10 140 10" stroke="#566133" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M140 260 C170 240 200 230 220 215" stroke="#566133" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M130 210 C100 195 75 195 55 205" stroke="#566133" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M125 170 C150 155 175 150 195 145" stroke="#566133" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M115 130 C90 118 70 115 52 120" stroke="#566133" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M130 90 C155 78 175 72 190 68" stroke="#566133" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <!-- flowers -->
+              <circle cx="220" cy="215" r="7" fill="#C8A3A0" opacity="0.7"/>
+              <circle cx="55" cy="205" r="6" fill="#C8A3A0" opacity="0.65"/>
+              <circle cx="195" cy="145" r="6" fill="#C8A3A0" opacity="0.6"/>
+              <circle cx="52" cy="120" r="5" fill="#C8A3A0" opacity="0.55"/>
+              <circle cx="190" cy="68" r="5" fill="#C8A3A0" opacity="0.5"/>
+              <circle cx="140" cy="10" r="8" fill="#C8A3A0" opacity="0.8"/>
+            </svg>
+            <p style="font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--olive-light);text-align:center;padding:0 32px;line-height:1.7;">
+              Crafted with love,<br>inspired by Paris
+            </p>
+          </div>
+          <div class="story-img-decor">
+            <span class="num en">29K+</span>
+            <span class="lbl">متابع سعيد</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ MENU ══════════════════════════ -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">Notre Menu</span>
+      <h2 class="section-title">المنيو الكامل</h2>
+      <div class="divider divider-center"></div>
+      <p class="section-body" style="max-width:480px;margin:0 auto;">كل ما تحتاجه من حلويات فاخرة ومشروبات استثنائية في مكان واحد</p>
+    </div>
+
+    <!-- Category selector -->
+    <div class="cat-grid" id="catGrid">
+      <div class="cat-card active" onclick="showPanel('donuts', this)">
+        <span class="cat-icon">🍩</span>
+        <span class="cat-name">الدونات</span>
+      </div>
+      <div class="cat-card" onclick="showPanel('cold', this)">
+        <span class="cat-icon">🥤</span>
+        <span class="cat-name">مشروبات باردة</span>
+      </div>
+      <div class="cat-card" onclick="showPanel('hot', this)">
+        <span class="cat-icon">☕</span>
+        <span class="cat-name">مشروبات حارة</span>
+      </div>
+      <div class="cat-card" onclick="showPanel('crepe', this)">
+        <span class="cat-icon">🥞</span>
+        <span class="cat-name">الكريب</span>
+      </div>
+      <div class="cat-card" onclick="showPanel('special', this)">
+        <span class="cat-icon">✨</span>
+        <span class="cat-name">عناصر مميزة</span>
+      </div>
+    </div>
+
+    <!-- ── PANEL: DONUTS ── -->
+    <div class="menu-panel active" id="panel-donuts">
+      <h3 style="font-size:13px;color:var(--text-muted);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:24px;direction:ltr;">Classic & Signature Donuts</h3>
+
+      <p style="font-size:12px;font-weight:600;color:var(--olive-light);margin-bottom:12px;">شكر دونات</p>
+      <div class="menu-grid" style="margin-bottom:36px;">
+        <div class="menu-card">
+          <div class="menu-card-name">كلاسيك دونات</div>
+          <div class="menu-card-desc">دونات بالوصفة الأصيلة المحضرة يومياً بأجود المكونات</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">1500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">2500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">محشي شوكولا</div>
+          <div class="menu-card-desc">دونات محشوة بكريم الشوكولاتة الفاخرة</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">2000</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">3500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">اكسترا شوكولا</div>
+          <div class="menu-card-desc">دونات مغطاة ومحشوة بطبقات من الشوكولاتة الفاخرة</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">2500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4000</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">بستاشيو ميلت</div>
+          <div class="menu-card-desc">دونات بكريم الفستق الطبيعي الناعم</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">2500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4000</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">لوتس دونات</div>
+          <div class="menu-card-desc">دونات بصوص لوتس الأصلي وبسكويت كانديل الكريمي</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">2500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:12px;font-weight:600;color:var(--olive-light);margin-bottom:12px;">أوريجينال سناكس دونات</p>
+      <div class="menu-grid" style="margin-bottom:36px;">
+        <div class="menu-card">
+          <div class="menu-card-name">كندر دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">سنيكرز دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">باونتي دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كيتكات دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كندر بوينو دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">تويكس دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+      </div>
+
+      <p style="font-size:12px;font-weight:600;color:var(--olive-light);margin-bottom:12px;">دونات بالفواكه الطبيعية</p>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-name">موز دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كيوي دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">فراولة دونات</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">مكس فروت</div>
+          <div class="menu-card-desc">تشكيلة من أطيب الفواكه الطازجة</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL: COLD DRINKS ── -->
+    <div class="menu-panel" id="panel-cold">
+      <h3 style="font-size:13px;color:var(--text-muted);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:24px;direction:ltr;">Cold & Signature Beverages</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-name">ايس جوكلت</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">4000</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">5000</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">ايس لاتيه</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">3500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">ايس سبانش لاتيه</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">4000</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">5500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">ايس كراميل ماكياتو</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">4000</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">5500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">ايس موكا</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">4000</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">5500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">ايس امريكانو</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">3500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">موهيتو فراولة</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">موهيتو باشن فروت</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">موهيتو اناناس</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">موهيتو ليمون ونعناع</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">موهيتو رمان</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">سبيشال شكر موهيتو</div>
+          <div class="menu-card-desc">موهيتو شكر الحصري بطعم لا يُقاوم</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL: HOT DRINKS ── -->
+    <div class="menu-panel" id="panel-hot">
+      <h3 style="font-size:13px;color:var(--text-muted);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:24px;direction:ltr;">Hot & Warm Beverages</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-name">اسبريسو</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">سنگل</span>&nbsp;<span class="sz-price">2500</span></div>
+              <div class="size-tag"><span class="sz-label">دبل</span>&nbsp;<span class="sz-price">3500</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">لاتيه</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">سبانش لاتيه</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كراميل ماكياتو</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">موكا</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">امريكانو</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">3000</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4000</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">هوت جوكلت</div>
+          <div class="menu-card-footer">
+            <div class="sizes-row">
+              <div class="size-tag"><span class="sz-label">وسط</span>&nbsp;<span class="sz-price">2500</span></div>
+              <div class="size-tag"><span class="sz-label">كبير</span>&nbsp;<span class="sz-price">4000</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">شاي عراقي</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">1000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">شاي كرك</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">2500</span><span class="currency">د.ع</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL: CREPE ── -->
+    <div class="menu-panel" id="panel-crepe">
+      <h3 style="font-size:13px;color:var(--text-muted);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:24px;direction:ltr;">Parisian-Style Crêpes</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="menu-card-name">شوكولا كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">فواكه كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">اكسترا فواكه كريب</div>
+          <div class="menu-card-desc">كريب مليء بأطيب الفواكه الطازجة وكريم خفيف</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">6000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كريب شبه الجزيرة</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">6500</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كريب دبي</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">لوتس كريب</div>
+          <div class="menu-card-desc">كريب بصوص لوتس وكريم البسكويت</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">فلافي كيك كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">اوريو كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">كندر كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">بانانا رول كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">4500</span><span class="currency">د.ع</span></div></div>
+        </div>
+        <div class="menu-card">
+          <div class="menu-card-name">فوتوشيني كريب</div>
+          <div class="menu-card-footer"><div class="menu-price"><span class="amount">5000</span><span class="currency">د.ع</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PANEL: SPECIALS ── -->
+    <div class="menu-panel" id="panel-special">
+      <h3 style="font-size:13px;color:var(--text-muted);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:24px;direction:ltr;">Signature & Special Items</h3>
+
+      <p style="font-size:12px;font-weight:600;color:var(--olive-light);margin-bottom:16px;">العناصر المميزة</p>
+      <div class="specials-grid" style="margin-bottom:40px;">
+        <div class="special-card">
+          <span class="special-card-icon">🍩</span>
+          <div class="special-card-name">سبيشال شكر دونات</div>
+          <div class="special-card-sub">كندر + فراولة + شوكولا — التحفة المطلقة</div>
+          <span class="special-card-price">4500 <span style="font-size:13px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+        <div class="special-card">
+          <span class="special-card-icon">🌟</span>
+          <div class="special-card-name">فري ستايل دونات</div>
+          <div class="special-card-sub">حقق أحلامك! صمّم دونات بمكوناتك المفضلة</div>
+          <span class="special-card-price">5000 <span style="font-size:13px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+        <div class="special-card">
+          <span class="special-card-icon">💥</span>
+          <div class="special-card-name">TNT دونات</div>
+          <div class="special-card-sub">دونات مقطعة مع الفواكه — انفجار من النكهات</div>
+          <span class="special-card-price">4500 <span style="font-size:13px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+      </div>
+
+      <p style="font-size:12px;font-weight:600;color:var(--olive-light);margin-bottom:16px;">الأطباق المميزة والبوكسات</p>
+      <div class="box-table">
+        <div class="box-row">
+          <span class="box-name">عرس شكر بوكس</span>
+          <span class="box-count">4\3 أشخاص</span>
+          <span class="box-price-cell">12,500 <span style="font-size:12px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+        <div class="box-row">
+          <span class="box-name">طبق دونات عربي</span>
+          <span class="box-count">4\3 أشخاص</span>
+          <span class="box-price-cell">13,500 <span style="font-size:12px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+        <div class="box-row">
+          <span class="box-name">رنك مكس</span>
+          <span class="box-count">3 قطع منوعة</span>
+          <span class="box-price-cell">6,500 <span style="font-size:12px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+        <div class="box-row">
+          <span class="box-name">رنك كومبو بوكس</span>
+          <span class="box-count">6 قطع منوعة</span>
+          <span class="box-price-cell">9,000 <span style="font-size:12px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+        <div class="box-row">
+          <span class="box-name">لارج رنك بوكس</span>
+          <span class="box-count">9 قطع منوعة</span>
+          <span class="box-price-cell">12,000 <span style="font-size:12px;color:var(--text-muted);">د.ع</span></span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════ FEATURED ══════════════════════════ -->
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">Best Sellers</span>
+      <h2 class="section-title">الأكثر طلباً</h2>
+      <div class="divider divider-center"></div>
+    </div>
+  </div>
+
+  <div class="feat-scroll">
+    <div class="feat-track" style="padding-right:24px;padding-left:24px;">
+
+      <div class="feat-card">
+        <div class="feat-thumb">
+          <div class="feat-thumb-gradient">🍩</div>
+          <div class="feat-tag">الأشهر</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">كندر دونات</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">قطعة من الجنة</div>
+          <span class="feat-price">4,000</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-thumb" style="background:linear-gradient(135deg,#EAE6D8,#DDD9CC);">
+          <div class="feat-thumb-gradient">🌸</div>
+          <div class="feat-tag">جديد</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">لوتس دونات</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">الكلاسيك المحبوب</div>
+          <span class="feat-price">4,000</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-thumb" style="background:linear-gradient(135deg,#E8E3D5,#DDD8C8);">
+          <div class="feat-thumb-gradient">💥</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">TNT دونات</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">انفجار نكهات</div>
+          <span class="feat-price">4,500</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-thumb" style="background:linear-gradient(135deg,#EDE9DC,#E5E0D3);">
+          <div class="feat-thumb-gradient">🥞</div>
+          <div class="feat-tag">مميز</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">كريب شبه الجزيرة</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">تجربة فاخرة</div>
+          <span class="feat-price">6,500</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-thumb" style="background:linear-gradient(135deg,#EBE8DB,#E4E0D2);">
+          <div class="feat-thumb-gradient">🍃</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">سبيشال شكر موهيتو</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">الحصري من شكر</div>
+          <span class="feat-price">5,000</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-thumb" style="background:linear-gradient(135deg,#EDE6D8,#E6DECD);">
+          <div class="feat-thumb-gradient">🌟</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">فري ستايل دونات</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">صمّم وصفتك</div>
+          <span class="feat-price">5,000</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-thumb" style="background:linear-gradient(135deg,#EAE5D7,#E2DDD0);">
+          <div class="feat-thumb-gradient">🥤</div>
+        </div>
+        <div class="feat-body">
+          <div class="feat-name">ايس كراميل ماكياتو</div>
+          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">كلاسيك فاخر</div>
+          <span class="feat-price">5,500</span><span style="font-size:11px;color:var(--text-muted);"> د.ع</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ INSTAGRAM ══════════════════════════ -->
+<section class="instagram" id="instagram">
+  <div class="container">
+    <div class="fade-in">
+      <span class="section-eyebrow" style="display:block;">Follow Along</span>
+      <h2 class="section-title">@shakar_iq</h2>
+      <div class="divider divider-center"></div>
+      <p class="section-body" style="max-width:400px;margin:0 auto 8px;">
+        29,000+ متابع يشاركوننا لحظات الحلوى والسعادة كل يوم
+      </p>
+    </div>
+
+    <div class="ig-grid">
+      <div class="ig-cell"><div class="ig-cell-inner">🍩<small>Kinder Donut</small></div></div>
+      <div class="ig-cell"><div class="ig-cell-inner">☕<small>Iced Latte</small></div></div>
+      <div class="ig-cell"><div class="ig-cell-inner">🌸<small>Lotus Crepe</small></div></div>
+      <div class="ig-cell"><div class="ig-cell-inner">🥤<small>Mojito</small></div></div>
+      <div class="ig-cell"><div class="ig-cell-inner">💥<small>TNT Donut</small></div></div>
+      <div class="ig-cell"><div class="ig-cell-inner">🎁<small>Shakar Box</small></div></div>
+    </div>
+
+    <a href="https://instagram.com/shakar_iq" target="_blank" class="ig-handle" style="margin-bottom:0;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      تابعنا على إنستغرام
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════ REVIEWS ══════════════════════════ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">Customer Love</span>
+      <h2 class="section-title">ماذا يقول زبائننا</h2>
+      <div class="divider divider-center"></div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-in">
+        <span class="stars">★★★★★</span>
+        <p class="review-text">
+          تجربة استثنائية! الدونات أفضل من أي كافيه جربته في بغداد. الجو هادئ وفاخر، والخدمة ممتازة. شكر أصبح وجهتي الأولى لكل مناسبة.
+        </p>
+        <div class="review-author">
+          <div class="review-avatar">👩</div>
+          <div>
+            <div class="review-author-name">سارة م.</div>
+            <div class="review-author-date">بغداد • مارس 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <span class="stars">★★★★★</span>
+        <p class="review-text">
+          والله ما توقعت أجد بالعراق مكان بهالجودة. كندر دونات حرفياً غير حياتي 😂 التغليف أنيق والمذاق لا يوصف. أنصح الجميع!
+        </p>
+        <div class="review-author">
+          <div class="review-avatar">👨</div>
+          <div>
+            <div class="review-author-name">أحمد ك.</div>
+            <div class="review-author-date">بغداد • فبراير 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-in">
+        <span class="stars">★★★★★</span>
+        <p class="review-text">
+          الكريب رائع جداً، وايس لاتيه من أفضل ما شربت. أحب الديكور والهوية البصرية لشكر — شعورك إنك في مقهى باريسي وسط بغداد.
+        </p>
+        <div class="review-author">
+          <div class="review-avatar">👩</div>
+          <div>
+            <div class="review-author-name">نور ع.</div>
+            <div class="review-author-date">بغداد • أبريل 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ LOCATION ══════════════════════════ -->
+<section class="location-section" id="location">
+  <div class="container">
+    <div class="section-header fade-in">
+      <span class="section-eyebrow">Find Us</span>
+      <h2 class="section-title">أين نحن؟</h2>
+      <div class="divider divider-center"></div>
+    </div>
+
+    <div class="location-inner">
+      <div class="location-info-block fade-in">
+        <div class="location-info-item">
+          <div class="ico">📍</div>
+          <div class="location-info-text">
+            <div class="label">العنوان</div>
+            <div class="value">شارع فلسطين – تقاطع الصخرة<br>بجوار المستشفى الملكي<br>بغداد، العراق</div>
+          </div>
+        </div>
+        <div class="location-info-item">
+          <div class="ico">⏰</div>
+          <div class="location-info-text">
+            <div class="label">أوقات العمل</div>
+            <div class="value">يومياً من 10:00 صباحاً حتى 3:00 فجراً</div>
+          </div>
+        </div>
+        <div class="location-info-item">
+          <div class="ico">📞</div>
+          <div class="location-info-text">
+            <div class="label">رقم التوصيل</div>
+            <div class="value" style="direction:ltr;text-align:right;">0771 641 7002</div>
+          </div>
+        </div>
+        <div class="location-info-item">
+          <div class="ico">🛵</div>
+          <div class="location-info-text">
+            <div class="label">التوصيل</div>
+            <div class="value">متاح — اتصل أو تواصل عبر واتساب</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+          <a href="tel:07716417002" class="btn-primary" style="flex:1;justify-content:center;">📞 اتصل بنا</a>
+          <a href="https://wa.me/9647716417002" target="_blank" class="btn-secondary" style="flex:1;justify-content:center;">💬 واتساب</a>
+        </div>
+      </div>
+
+      <div class="map-frame fade-in">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d866.2!2d44.4146292!3d33.360367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1557835e7d3da5f7%3A0xe469c8d6f965ffb3!2z2LnZg9ixoA!5e0!3m2!1sar!2siq!4v1720000000000!5m2!1sar!2siq"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="موقع شكر بغداد">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer>
+  <span class="footer-logo">شَكَر</span>
+  <p class="footer-tagline">Shakar · Baghdad</p>
+  <div class="footer-links">
+    <a href="#menu">المنيو</a>
+    <a href="#story">قصتنا</a>
+    <a href="#location">الموقع</a>
+    <a href="https://instagram.com/shakar_iq" target="_blank">إنستغرام</a>
+    <a href="tel:07716417002">07716417002</a>
+  </div>
+
+  <!-- Botanical footer decoration -->
+  <svg viewBox="0 0 400 60" width="320" style="margin:0 auto 20px;display:block;opacity:0.25;" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 40 C80 20 120 18 160 30 C200 42 240 42 280 30 C320 18 360 20 390 40" stroke="#EAE6D8" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <circle cx="160" cy="30" r="4" fill="#C8A3A0" opacity="0.6"/>
+    <circle cx="240" cy="30" r="4" fill="#C8A3A0" opacity="0.6"/>
+    <circle cx="200" cy="42" r="3" fill="#C8A3A0" opacity="0.5"/>
+    <!-- tiny petals -->
+    <path d="M158 27 C160 23 163 26 160 29 C163 27 166 30 163 32 C160 34 158 31 160 29Z" fill="#C8A3A0" opacity="0.5"/>
+    <path d="M238 27 C240 23 243 26 240 29 C243 27 246 30 243 32 C240 34 238 31 240 29Z" fill="#C8A3A0" opacity="0.5"/>
+  </svg>
+
+  <p class="footer-copy">© 2025 شَكَر | Shakar — Baghdad, Iraq. All rights reserved.</p>
+</footer>
+
+<!-- ══════════════════════════ FLOATING BAR ══════════════════════════ -->
+<div class="float-bar">
+  <a href="tel:07716417002" class="float-btn">
+    <span class="f-icon">📞</span>
+    <span class="f-label">اتصال</span>
+  </a>
+  <a href="#location" class="float-btn">
+    <span class="f-icon">📍</span>
+    <span class="f-label">الموقع</span>
+  </a>
+  <a href="https://wa.me/9647716417002" target="_blank" class="float-btn">
+    <span class="f-icon">💬</span>
+    <span class="f-label">واتساب</span>
+  </a>
+  <a href="tel:07716417002" class="float-btn float-btn-primary">
+    <span class="f-icon">🍩</span>
+    <span class="f-label">اطلب</span>
+  </a>
+</div>
+
+<!-- ══════════════════════════ SCRIPTS ══════════════════════════ -->
+<script>
+  // Menu category switcher
+  function showPanel(id, el) {
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    el.classList.add('active');
+  }
+
+  // Intersection Observer for fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, (i % 4) * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Nav background on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 40
+      ? '0 2px 20px rgba(86,97,51,0.1)'
+      : 'none';
+  });
+
+  // Smooth anchor scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
